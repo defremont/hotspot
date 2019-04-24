@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REDESPOT - REDEPARÁ</title>
+    <meta name="description" content="Recursivo"/>
+    <meta name="keywords" content="sites, mikrotik"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>-->
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Pedro Batista"/>
+    <link rel="stylesheet" href="css/style-geral.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+
+    <link rel="icon" href="img/icon.png"/>
+
+    <script>
+        function verificaHora() {
+            stamp = new Date();
+            var time;
+            hours = stamp.getHours();
+            if(hours < 5){
+                time = "boa noite!";
+            }else if(hours < 8){
+                time = "bom dia!";
+            }else if(hours < 12){
+                time = "bom dia!";
+            }else if(hours <18){
+                time = "boa tarde!";
+            }else{
+                time = "boa noite!";
+            }
+            document.write(time);
+
+        }
+    </script>
+
+    <script language="JavaScript">
+        $(if advert-pending == 'yes')
+            var popup = '';
+        function focusAdvert() {
+            if (window.focus) popup.focus();
+        }
+        function openAdvert() {
+            popup = open('$(link-advert)', 'hotspot_advert', '');
+            setTimeout("focusAdvert()", 1000);
+        }
+        $(endif)
+        function openLogout() {
+            if (window.name != 'hotspot_status') return true;
+            open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+            window.close();
+            return false;
+        }
+    </script>
+    <script type="text/javascript" src="dados.js"></script>
+    <script>document.title = "Status - " + nome;</script>
+
+</head>
+<body>
+
+
+
+<!--INICIO DO BANNER-->
+<nav>
+    <div class="banner">
+        <div class="title">
+
+        </div>
+        <a href="https://redepara.com.br"><img src="images/canal.png" alt="REDEPARÁ"/></a>
+
+
+    </div>
+</nav>
+
+<!-- FIM DO BANNER -->
+
+
+
+<!--Login e curtir-->
+
+<section id="first" class="login">
+    $(if login-by != 'mac')
+    <h1>Olá, <script>verificaHora()</script></h1>
+    <h2>Informações sobre sua conexão,</h2>
+    $(endif)
+    $(if login-by-mac != 'yes')<br>
+    <p>Dados de acesso</p>
+    <ul>
+        <li>Endereço IP: $(ip)</li>
+        <li>Dados Upload/Download: $(bytes-in-nice) / $(bytes-out-nice)</li>
+        $(if session-time-left)
+        <li>Tempo conectado / Tempo restante: $(uptime) / $(session-time-left)</li>
+        $(else)
+        <li>Tempo conectado: $(uptime)</li>
+        $(endif)
+        $(if blocked == 'yes')
+        <li>Status: </li>
+    </ul>
+    <a href="$(link-advert)" target="hotspot_advert"> advertisement</a> required<br>
+    $(elif refresh-timeout)
+    $(endif)
+    <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+        <br><button type="submit" class="btn-voltar" value="Volte para o Login">Desconectar</button>
+    </form>
+
+    $(endif)
+
+
+
+</section>
+
+
+<!--rodape-->
+<br><br>
+<footer class="rodape">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/redepara/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/redepara"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/redepara/"><i class="fa fa-instagram"></i></a>
+        <a href="mailto:contato@redepara.com.br"><i class="fa fa-envelope"></i></a>
+    </div>
+    <p class="copyright">
+        Copyright © - <a href="http://redepara.com.br"><script type="text/javascript">document.write(nome)</script></a>
+    </p>
+</footer>
+
+
+</body>
+</html>
