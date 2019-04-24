@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Hotspot Login via facebook</title>
+<meta charset="UTF-8">
+
+
+<script>
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    if (response.status === 'connected') {
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '125718358068909', // <<< ENTER YOUR APPID HERE REPLACE THE 000000000000000000000
+	
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.1' // use version 2.1
+  });
+
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Obrigado por logar, ' + response.name + '!';
+    });
+	
+
+    FB.login(function(){
+	FB.api('/me/feed', 'post', {message: 'Estou usando o hotspot!'}); //CHANGE MESSAGE HERE!
+	}, 
+	{scope: 'publish_actions'});
+	FB.Event.subscribe('auth.login', function(){
+    
+});
+	
+
+	FB.Event.subscribe('auth.authResponseChange', function(response) {
+  if (response.status === 'connected') {
+    window.top.location = 'http://futturu.hotspot.com/login?username=user1&password=methos'//redirect-url.com'; REDIRECTS TO ROUTER USING THE ''USER2'' as username AND ''USER2'' as password
+	
+	
+  }
+ 
+});
+  }
+</script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=125718358068909&version=v2.0"; // <<< ENTER YOUR APPID HERE REPLACE THE 00000000000000000
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</head>
+<body>
+
+<div id="fb-root"></div>
+
+
+<fb:login-button scope="publish_actions" onlogin='window.location.reload(true);'></fb:login-button>
+
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+
+
+<div id="status"></div>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REDESPOT - REDEPARÁ</title>
+    <meta name="description" content="Recursivo"/>
+    <meta name="keywords" content="hotspot, mikrotik"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>-->
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Pedro Batista"/>
+    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+    <link rel="icon" href="img/icon.png"/>
+
+    <!--DATA e HORA-->
+
+    <script>
+
+        function EscreveData() {
+            var mydate=new Date()
+            var year=mydate.getYear()
+            if (year < 1000)
+                year+=1900
+            var day=mydate.getDay()
+            var month=mydate.getMonth()
+            var daym=mydate.getDate()
+            if (daym<10)
+                daym="0"+daym
+            var dayarray=new
+            Array("domingo","segunda-feira","ter&ccedil;a-feira","quarta-feira","quinta-feira","sexta-feira","s&aacute;bado")
+            var montharray=new
+            Array("Janeiro","Fevereiro","Mar&ccedil;o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
+            document.write(""+dayarray[day]+", "+daym+" de "+montharray[month]+" de "+year+" </b></font></small>")
+        }
+
+        function EscreveHora() {
+            agora = new Date (); horas = agora.getHours ();
+            minutos = agora.getMinutes ();
+            if (horas < 10) horas = "0" + horas;
+            if (minutos < 10) minutos = "0" + minutos;
+            document.write(horas+":" +minutos+ "h");
+        }
+
+    </script>
+
+    <! -- FIM/ DATA E HORA -->
+    <script type="text/javascript" src="dados.js"></script>
+    <script>document.title = "HotSpot - " + nome;</script>
+
+</head>
+<body>
+
+$(if chap-id)
+<form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+</form>
+
+<script type="text/javascript" src="/md5.js"></script>
+<script type="text/javascript">
+    <!--
+    function doLogin() {
+		document.sendin.username.value = 'fb';
+		document.sendin.password.value = hexMD5('$(chap-id)' + '' + '$(chap-challenge)');
+        document.sendin.submit();
+        return false;
+    }
+    //-->
+</script>
+$(endif)
+
+<script>
+        window.fbAsyncInit = function() {
+          FB.init({ 
+            appId      : '125718358068909',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v2.7'
+          });
+          FB.AppEvents.logPageView();       
+        };
+      
+      
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;} 
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+         
+          function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                     window.location = "$(link-login-only)?dst=$(link-orig-esc)&username=T-$(mac-esc)";
+                } else if (response.status === 'not_authorized') {
+                  alert('É preciso autorizar o aplicativo');
+                } else {
+                  alert('Ocorreu um erro, tente mais tarde');
+                }
+            });
+          }
+          
+      </script> 
+
+<!--INICIO DO BANNER-->
+<nav>
+    <div class="banner">
+        <div class="title">
+
+        </div>
+        <a href="http://www.redepara.com.br" target="_blank"><img src="images/logo.png" alt="REDEPARÁ"/></a>
+
+
+    </div>
+</nav>
+
+<!-- FIM DO BANNER -->
+
+
+
+<!--Login e curtir-->
+
+<section id="first" class="login">
+    <h1>Bem-vindo ao HotSpot do REDEPARÁ</h1>
+    <h4>Hoje é <script>EscreveData();</script><script>EscreveHora();</script></h4>
+
+    <header>
+
+        <h2>Faça login com o Facebook e navegue por <script language="javascript">
+            document.write(tempo)</script>.</h2><br>
+    
+		<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+
+                <fieldset>
+                    
+                    
+                <center>	<fb:login-button 
+                      scope="public_profile,email"
+                      onlogin="checkLoginState();">
+                    </fb:login-button> </center>
+                </fieldset>
+    
+            </form>
+
+        
+		<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                <input type="hidden" name="dst" value="$(link-orig)" />
+                <input type="hidden" name="popup" value="false" />
+                <input type="hidden" name="username" value="fb"/>
+                <input type="hidden" name="password" value=""/>
+                </form>
+
+
+    </header>
+
+</section>
+
+
+<!--rodape-->
+<br><br>
+<footer class="rodape">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/redepara/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/redepara"><i class="fa fa-twitter"></i></a>
+        <!--<a href="#"><i class="fa fa-google"></i></a>-->
+        <a href="https://www.instagram.com/redepara/"><i class="fa fa-instagram"></i></a>
+        <a href="mailto:contato@redepara.com.br"><i class="fa fa-envelope"></i></a>
+    </div>
+    <p class="copyright">
+        Copyright © - <a href="http://redepara.com.br" target="_blank"><script type="text/javascript">document.write(nome)</script></a>
+    </p>
+</footer>
+
+
+<!-- Jquery-->
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

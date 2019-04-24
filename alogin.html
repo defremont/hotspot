@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta http-equiv="refresh" content="3"; url=$(link-redirect) charset="ISO-8859-1" />
+        <meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="3">
+	<link rel="stylesheet" href="css/style-geral.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+
+	<link rel="icon" href="img/icon.png" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="css/skel-noscript.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-wide.css" />
+	</noscript>
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	<script language="JavaScript">
+			function startClock() {
+				$(if popup == 'true')
+					open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+				$(endif)
+				location.href = '$(link-redirect)';
+			}
+	</script>
+	<script type="text/javascript" src="dados.js"></script>
+	<script>document.title = "Conectado com sucesso! - " + nome;</script>
+
+</head>
+
+<body onLoad="startClock()">
+	<!--INICIO DO BANNER-->
+	<nav>
+		<div class="banner">
+			<div class="title">
+
+			</div>
+			<a href="#"><img src="images/logo.png" alt="REDEPARÁ" /></a>
+
+
+		</div>
+	</nav>
+
+	<!-- FIM DO BANNER -->
+
+
+
+	<!--Login e curtir-->
+
+	<section id="first" class="login">
+
+		<table width="100%" height="100%">
+			<tr>
+				<td align="center" valign="middle" style="font-size: 16px">
+					<br>
+					<div class="loader">Carregando...</div>
+					<br>
+					<h1><span style="color:black">Conectado com sucesso!</span></h1><br />
+					<h2><span style="color:black">Redirecionando...</span></h2>
+			</tr>
+		</table>
+
+	</section>
+
+
+	<!--rodape-->
+	<br><br>
+	<footer class="rodape">
+		<div class="social-icons">
+			<a href="https://www.facebook.com/redepara/" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/redepara"><i class="fa fa-twitter"></i></a>
+			<!--<a href="#"><i class="fa fa-google"></i></a>-->
+			<a href="https://www.instagram.com/redepara/"><i class="fa fa-instagram"></i></a>
+			<a href="mailto:contato@redepara.com.br"><i class="fa fa-envelope"></i></a>
+		</div>
+		<p class="copyright">
+			Copyright © - <a href="http://redepara.com.br">
+				<script type="text/javascript">document.write(nome)</script></a>
+		</p>
+	</footer>
+
+
+</body>
+
+</html>

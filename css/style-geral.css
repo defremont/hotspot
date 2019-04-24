@@ -1,0 +1,641 @@
+/*RESET*/
+
+*{
+    margin:0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+
+/*cabecalho*/
+.cabecalho{
+    width: 100%;
+    float: left;
+    padding:2% 4%;
+
+
+}
+.logo{
+    width: 56px;
+    height: 76px;
+    float: left;
+    background: url("../img/logo-mobile.png") center center/56px no-repeat;
+    font-size:0;
+}
+.logo-futturu{
+    margin:0;
+    padding:0;
+    float: left;
+    width: 205px;
+    height: 80px;
+
+}
+.btn-menu{
+    width: 56px;
+    height: 56px;
+    float: right;
+    text-align: center;
+    color: #fff;
+    border-radius: 56px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ce2e3c, #da6709);
+
+}
+/*Menu*/
+.menu{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.9);
+    top:0;
+    left:0;
+}
+section.login{
+    background: rgba(0,0,0,0);
+}
+.btn-close{
+    font-size: 1.5em;
+    color: #fff;
+    float: right;
+    cursor: pointer;
+    margin: 2% 3% 0 0;
+}
+.menu ul{
+    width: 100%;
+    float: left;
+    text-align: center;
+
+}
+.menu li{
+    padding: 1.5%;
+
+}
+.menu li a{
+    font-size: 2em;
+    color: #fff;
+    padding:1.5% 3%;
+}
+.menu li a:hover{
+    border: 1px solid #da6709;
+}
+
+/*BANNER*/
+.banner{
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding:10% 4% 10%;
+    box-shadow: 1px 1px 1px black;
+
+}
+
+
+h2{
+    font-size:2.0em;
+    color: #fff;
+    font-weight: 700;
+}
+
+.title{
+    width: 100%;
+}
+.title h2{
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+}
+.title h3{
+    font-size:1.5em;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+}
+.title h4{
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+}
+.title p{
+    font-size: 1em;
+    color: rgba(255,255,255,0.6);
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(222,222,222,.3);
+
+}
+.buttons{
+    width: 100%;
+    margin-top: 2%;
+}
+.buttons i{
+    float: right;
+    padding:2%;
+}
+.buttons a:hover{
+    color: red;
+}
+form.form{
+    background: transparent;
+}
+.btn-logar{
+    width: 100%;
+    text-align: center;
+    font-size:1.5em;
+    cursor: pointer;
+    padding:4%;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #130400;
+    margin-top: 10%;
+    box-shadow: 2px 2px 6px black;
+
+}
+.btn-voltar{
+    width: 120px;
+    height: 40px;
+    background-color: #089C00 ;
+    color: #fff;
+    padding:0%;
+    border: 1px solid ;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1%;
+
+}
+
+.btn-checkin{
+    width: 84px;
+    height: 32px;
+    text-align: center;
+    font-size:1.1em;
+    cursor: pointer;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: #4267B2;
+    color: #fff;
+    margin-top: 3%;
+}
+.btn-logar:hover{
+    color: black;
+
+
+}
+.btn-sobre{
+    width: 100%;
+    text-align: center;
+    font-size:1.5em;
+    cursor: pointer;
+    padding:5%;
+    border-radius: 10px;
+    background-color: #130400;
+    color: #fff;
+    margin-top: 2%;
+}
+.logins{
+    width: 100%;
+    padding:3% 4%;
+}
+
+/*servicos*/
+.servicos{
+    width:100%;
+    float: left;
+    padding:3% 4%;
+
+}
+.servico{
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 3%;
+}
+.servico img{
+    width: 100%;
+    border-radius: 7px 7px 0 0;
+    box-shadow: 1px 1px 2px black;
+}
+
+.inner{
+    padding:7%;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 2px black;
+    border-radius: 0 0 5px 5px;
+}
+.inner a{
+    font-size:1.5em;
+    color: #130400;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.3);
+}
+.inner h4{
+    font-size: 1.2em;
+    color: #130400;
+    margin-top: 2%;
+
+}
+.inner p{
+    margin-top: 6%;
+    color: #130400;
+    line-height: 1.5em;
+}
+
+
+/*LOGIN E CURTIR*/
+.login{
+    width:100%;
+    float: left;
+    text-align: center;
+    padding:3% 4%;
+    background-color: #fff;
+
+}
+.login h1{
+    color: #000;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.1);
+
+}
+.login h2{
+    font-size:1.5em;
+    color: #130400;
+    font-weight: 700;
+}
+.login h3{
+    color: #130400;
+}
+.login h4{
+    color: #000;
+    font-size: 15px;
+}
+.login form{
+    margin-top: 2%;
+}
+
+
+
+/*RODAPE*/
+.rodape{
+    width: 100%;
+    float: left;
+    padding:5% 4%;
+    padding-bottom: 10px;
+    padding-top: 28px;
+    text-align: center;
+    font-size: 17px;
+
+
+}
+.social-icons a{
+    font-size: 1.5em;
+    color: rgba(0,0,0,0.63);
+    margin-right: 3%;
+
+}
+.social-icons a:last-child{
+    margin-right: 0;
+}
+.social-icons a:hover{
+    color: rgba(0,0,0,0.43) ;
+}
+.copyright{
+    margin-top: 2%;
+    color: rgba(0,0,0,0.63);
+
+}
+
+/* mobile first */
+@media screen and (min-width: 320px){
+    .login h1{
+        color: #000;
+        text-shadow: 2px 2px 2px rgba(0,0,0,.1);
+        font-size: 2.2em;
+
+    }
+    .logo{
+        width: 214px;
+        background: url("../img/logo-futturu.png") center center/214px no-repeat;
+
+    }
+    .btn-logar{
+        font-size: 2em;
+    }
+    .btn-sobre{
+        font-size: 2em;
+    }
+    .form_login input{
+
+    }
+    .title h2{
+        font-size: 2.5em;
+        color: #fff;
+        font-weight: 700;
+        text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+
+    }
+    .title h3{
+        font-size: 1.5em;
+        color: #fff;
+        text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+    }
+    .btn-logar{
+        width: 50%;
+        text-align: center;
+        font-size:1.5em;
+        cursor: pointer;
+        padding:4%;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #130400;
+        margin-top: 10%;
+    }
+    .btn-checkin{
+        width: 84px;
+        height: 32px;
+        text-align: center;
+        font-size:1.1em;
+        cursor: pointer;
+        padding: 2%;
+        border-radius: 10px;
+        background-color: #4267B2;
+        color: #fff;
+        margin-top: 3%;
+    }
+    .logo-futturu{
+        width: 150px;
+        height: 66px;
+        float: inherit;
+        padding-bottom: 10px;
+
+    }
+    .form_login button{
+        width: 28%;
+        background-color: #089C00 ;
+        color: #fff;
+        padding:2%;
+        border: 1px solid ;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1%;
+        margin-left: 8%;
+
+    }
+
+
+}
+
+/* tablets */
+@media screen and ( min-width: 768px){
+    .servico{
+        width: 49%;
+        float: left;
+        margin-right: 2%;
+
+    }
+    .servico:nth-child(2){
+        margin-right: 0;
+    }
+    .newsletter h2{
+        font-size: 2em;
+    }
+    .newsletter h3{
+        font-size: 1.5em;
+    }
+    .newsletter input{
+        width: 70%;
+        padding:2%;
+        float: left;
+        margin-right: 1%;
+    }
+    .newsletter button{
+        width: 29%;
+        padding:2%;
+        float: right;
+        margin-top: 0;
+    }
+    .btn-logar{
+        width: 50%;
+        text-align: center;
+        font-size:1.5em;
+        cursor: pointer;
+        padding:4%;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #130400;
+        margin-top: 10%;
+    }
+    .form_login input{
+        width: 40%;
+        background-color: rgba(0,0,0,0.07);
+        color: rgba(5,8,33,0.71);
+        border: 2px solid rgb(132,128,128);
+        padding:2%;
+        border-radius: 5px;
+        margin-top: 2px;
+
+    }
+    .form_login button{
+        width: 15%;
+        background-color: #089C00 ;
+        color: #fff;
+        padding:1%;
+        border: 1px solid ;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1%;
+        margin-left: 8%;
+
+    }
+    .form_login a{
+        margin-left: 1%;
+    }
+    .banner{
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding:3% 4% 3%;
+        box-shadow: 1px 1px 1px black;
+
+    }
+
+}
+
+/* TABLETS e DESKTOP */
+@media screen and (min-width: 960px){
+    .title{
+        width: 70%;
+        float: left;
+        text-align: left;
+    }
+    .title h2{
+        font-size:3em;
+    }
+    .title h3{
+        font-size:2em;
+    }
+    .buttons{
+        width: 30%;
+        float: right;
+        margin-top: 0;
+    }
+    .servico{
+        width: 32%;
+
+    }
+    .servico:nth-child(2){
+        margin-right: 2%;
+    }
+    .servico:nth-child(3){
+        margin-right: 0;
+    }
+    .newsletter input{
+        width: 60%;
+        float: none;
+    }
+    .newsletter button{
+        width: 20%;
+        float: none;
+    }
+    .form_login input{
+        width: 40%;
+        background-color: rgba(0,0,0,0.07);
+        color: rgba(5,8,33,0.71);
+        border: 2px solid rgb(132,128,128);
+        padding:2%;
+        border-radius: 5px;
+        margin-top: 2px;
+
+
+    }
+    .form_login button{
+        width: 15%;
+        background-color: #089C00 ;
+        color: #fff;
+        padding:1%;
+        border: 1px solid ;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1%;
+        margin-left: 8%;
+
+    }
+    .form_login a{
+        margin-left: 1%;
+    }
+    .btn-checkin{
+        width: 84px;
+        height: 32px;
+        text-align: center;
+        font-size:1.1em;
+        cursor: pointer;
+        padding: 2%;
+        border-radius: 10px;
+        background-color: #4267B2;
+        color: #fff;
+        margin-top: 3%;
+    }
+    .banner{
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding:3% 4% 3%;
+        box-shadow: 1px 1px 1px black;
+
+    }
+}
+
+/* LARGE DEVICES - WIDESCREEN */
+@media screen and (min-width: 1280px){
+    .btn-menu{
+        display: none;
+
+    }
+    .btn-close{
+        display: none;
+
+    }
+    .menu{
+        width: auto;
+        height: 56px;
+        line-height: 56px;
+        float: right;
+        background-color: #f5f5f5;
+        display: block !important;
+        position: static;
+
+    }
+    .menu li{
+        padding:0;
+        float: left;
+
+    }
+    .menu li a{
+        color: #130400;
+        font-size: 1em;
+        padding:15px;
+    }
+    .menu li a:hover{
+        border: none;
+        color: #da6709;
+    }
+    .form_login input{
+        width: 40%;
+        background-color: rgba(0,0,0,0.07);
+        color: rgba(5,8,33,0.71);
+        border: 2px solid rgb(132, 128, 128);
+        padding:2%;
+        border-radius: 5px;
+        margin-top: 2px;
+
+    }
+    .form_login button{
+        width: 15%;
+        background-color: #089C00 ;
+        color: #fff;
+        padding:1%;
+        border: 1px solid ;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1%;
+        margin-left: 8%;
+
+    }
+    .form_login a{
+        margin-left: 1%;
+    }
+    .btn-checkin{
+        width: 84px;
+        height: 32px;
+        text-align: center;
+        font-size:1.1em;
+        cursor: pointer;
+        padding: 2%;
+        border-radius: 10px;
+        background-color: #4267B2;
+        color: #fff;
+        margin-top: 3%;
+    }
+    .banner{
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding:3% 4% 3%;
+        box-shadow: 1px 1px 1px black;
+
+    }
+}
